@@ -6,6 +6,9 @@ app.use('/',(req,res,next)=>{
     })
 })
 
-app.listen(3636,()=>{
-    console.log('server is started on port 3636');
+
+const p=process.env.PORT || 3636
+app.listen(p,()=>{
+    console.log(process.env.PORT);
+    console.log(`server is started on port ${p}`);
 })
